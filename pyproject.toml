@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "langchain-rustchain"
+version = "0.1.0"
+description = "LangChain tool for RustChain blockchain — check balances, epochs, health, and more"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = [
+    "langchain-core>=0.1.0",
+    "pydantic>=2.0",
+    "requests>=2.28",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[tool.setuptools.packages.find]
+include = ["langchain_rustchain*"]
